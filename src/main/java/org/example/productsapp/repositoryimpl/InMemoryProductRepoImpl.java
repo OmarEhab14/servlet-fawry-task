@@ -40,6 +40,6 @@ public class InMemoryProductRepoImpl implements ProductRepo {
 
     @Override
     public void deleteProduct(Integer id) {
-        products.remove(productId);
+        products.remove(id);
     }
 }
