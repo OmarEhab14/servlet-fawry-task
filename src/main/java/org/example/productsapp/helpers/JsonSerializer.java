@@ -11,6 +11,9 @@ public class JsonSerializer {
                 "\", \"price\" : \"" + product.getPrice() + "\"}";
     }
     public static String serializeProducts(List<Product> products) {
+        if (products == null || products.isEmpty()) {
+            return "[]";
+        }
         String json = "[";
         for (Product product : products) {
             json += serializeProduct(product);
